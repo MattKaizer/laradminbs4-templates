@@ -1,0 +1,36 @@
+{
+    "name": "mbm/laradminbs4-templates",
+    "description": "Admin templates for Infyom Laravel generator",
+    "keywords": [
+        "infyom",
+        "laravel",
+        "generator",
+        "adminlte",
+        "templates",
+        "bootstrap"
+    ],
+    "require": {
+        "php": ">=5.5.9",
+        "illuminate/support": "5.8.*"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "MattKaiser",
+            "email": "morenobmatias@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-4": {
+            "MbM\\LarAdminBs4Templates\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "\\MbM\\LarAdminBs4Templates\\LarAdminBs4ServiceProvider"
+            ]
+        }
+    }
+}
