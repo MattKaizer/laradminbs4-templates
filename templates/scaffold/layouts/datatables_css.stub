@@ -1,0 +1,1 @@
+<link href="{{mix('vendor/datatable/css/datatable.css')}}" rel="stylesheet">

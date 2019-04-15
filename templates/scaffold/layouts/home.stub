@@ -13,8 +13,8 @@
 
     <!-- Custom styles for this template-->
     <link href="{{mix('css/app.css')}}" rel="stylesheet">
-
-    @stack('datatable-styles')
+    <!-- Datatable styles -->
+    @yield('css')
 
 </head>
 
@@ -270,17 +270,8 @@
 <script src="{{mix('js/custom.js')}}"></script>
 
 <!-- Datatable scripts -->
-@stack('datatable-script')
+@yield('scripts')
 
-<!-- Datatable scripts -->
-@stack('charts-script')
-
-<!-- Page level custom scripts -->
-@stack('demoDatatable-script')
-
-<!-- Page level custom scripts -->
-@stack('demoareapie-charts-script')
-@stack('demobar-charts-script')
 </body>
 
 </html>
