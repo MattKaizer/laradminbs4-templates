@@ -271,7 +271,7 @@
 <script src="{{mix('js/app.js')}}"></script>
 
 <!-- Custom scripts for all pages-->
-<script src="{{mix('js/customJs/custom.js')}}"></script>
+<script src="{{mix('js/custom.js')}}"></script>
 
 <!-- Datatable scripts -->
 @stack('scripts')

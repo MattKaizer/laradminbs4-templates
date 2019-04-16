@@ -1,4 +1,4 @@
-@extends('layouts.home')
+@extends('layouts.appHome')
 @section('title', "Tables")
 @push('css')
     <link href="{{mix('vendor/datatable/css/datatable.css')}}" rel="stylesheet">
