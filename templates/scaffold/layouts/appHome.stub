@@ -14,7 +14,7 @@
     <!-- Custom styles for this template-->
     <link href="{{mix('css/app.css')}}" rel="stylesheet">
     <!-- Datatable styles -->
-    @yield('css')
+    @stack('css')
 
 </head>
 
@@ -274,7 +274,7 @@
 <script src="{{mix('js/custom.js')}}"></script>
 
 <!-- Datatable scripts -->
-@yield('scripts')
+@stack('scripts')
 
 </body>
 

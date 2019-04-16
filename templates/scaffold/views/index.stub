@@ -1,6 +1,6 @@
-@extends('layouts.home')
+@extends('layouts.appHome')
 @section('title', "Tables")
-@push('datatable-styles')
+@push('css')
     <link href="{{mix('vendor/datatable/css/datatable.css')}}" rel="stylesheet">
 @endpush
 @section('content')
@@ -24,16 +24,11 @@
         <div class="table-responsive">
             @include('$VIEW_PREFIX$$MODEL_NAME_PLURAL_SNAKE$.table')
         </div>
-        <div class="text-center">
-        $PAGINATE$
-        </div>
     </div>
     </div>
 </div>
 @endsection
-@push('datatable-script')
+@push('scripts')
     <script src="{{mix('vendor/datatable/js/datatable.js')}}"></script>
-@endpush
-@push('datatable-script')
-    <script src="{{asset('js/datatables-init.js')}}"></script>
+    <script src="{{asset('vendor/datatable/js/datatables-init.js')}}"></script>
 @endpush

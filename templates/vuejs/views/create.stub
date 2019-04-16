@@ -1,27 +1,22 @@
-@extends('layouts.home')
-
+@extends('layouts.appHome')
+@section('title', "Create")
 @section('content')
-<!-- Begin Page Content -->
 
 <div class="container-fluid">
-
     <!-- Page Heading -->
     <h1 class="h3 mb-2 text-gray-800">$MODEL_NAME_HUMAN$</h1>
-    <div class="row">
-        @include('laradminbs4-templates::common.errors')
-        <div class="col">
-            <div class="card shadow mb-4">
-                <div class="card-header py-3">
-                    <h6 class="m-0 font-weight-bold text-primary">Datos Generales</h6>
-                </div>
-                <div class="card-body">
-                    {!! Form::open(['route' => '$ROUTE_NAMED_PREFIX$$MODEL_NAME_PLURAL_CAMEL$.store']) !!}
+    @include('laradminbs4-templates::common.errors')
+    <br>
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-primary">Insert Register</h6>
+        </div>
+        <div class="card-body">
+            {!! Form::open(['route' => '$ROUTE_NAMED_PREFIX$$MODEL_NAME_PLURAL_CAMEL$.store']) !!}
 
-                        @include('$VIEW_PREFIX$$MODEL_NAME_PLURAL_SNAKE$.fields')
+            @include('$VIEW_PREFIX$$MODEL_NAME_PLURAL_SNAKE$.fields')
 
-                    {!! Form::close() !!}
-                </div>
-            </div>
+            {!! Form::close() !!}
         </div>
     </div>
 </div>

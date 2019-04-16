@@ -1,2 +1,0 @@
-<script src="{{mix('vendor/datatable/js/datatable.js')}}"></script>
-<script src="{{asset('vendor/datatable/js/datatables-init.js')}}"></script>

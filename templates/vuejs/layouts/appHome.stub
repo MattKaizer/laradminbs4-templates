@@ -13,8 +13,8 @@
 
     <!-- Custom styles for this template-->
     <link href="{{mix('css/app.css')}}" rel="stylesheet">
-
-    @stack('datatable-styles')
+    <!-- Datatable styles -->
+    @stack('css')
 
 </head>
 
@@ -257,7 +257,11 @@
             <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
             <div class="modal-footer">
                 <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                <a class="btn btn-primary" href="{{ url('/logout') }}">Logout</a>
+                <a class="btn btn-primary" href="{{ url('/logout') }}" onclick="event.preventDefault();
+                document.getElementById('logout-form').submit();">Logout</a>
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                    @csrf
+                </form>
             </div>
         </div>
     </div>
@@ -270,17 +274,8 @@
 <script src="{{mix('js/custom.js')}}"></script>
 
 <!-- Datatable scripts -->
-@stack('datatable-script')
+@stack('scripts')
 
-<!-- Datatable scripts -->
-@stack('charts-script')
-
-<!-- Page level custom scripts -->
-@stack('demoDatatable-script')
-
-<!-- Page level custom scripts -->
-@stack('demoareapie-charts-script')
-@stack('demobar-charts-script')
 </body>
 
 </html>
